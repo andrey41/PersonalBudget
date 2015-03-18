@@ -11,6 +11,7 @@ import java.util.ArrayList;
  *
  * @author Andrey
  */
+//test!
 public class Category {
     ArrayList<Record> records;
     String name;
