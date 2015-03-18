@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="@color/white">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/Category_ur1" android:visibility="visible">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="0" android:minHeight="0dp"
+                android:minWidth="0dp" android:background="@drawable/zagolovok_rashod" android:id="@+id/Category_ur1_verh"
+                android:focusable="true">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="15" android:minHeight="0dp"
+                    android:minWidth="0dp">
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp"/>
+                <Button
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/back" android:layout_weight="1" android:minHeight="0dp"
+                        android:minWidth="0dp" android:background="@drawable/arrow_rashod"/>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Расходы"
+                    android:id="@+id/finObj" android:layout_weight="80" android:minHeight="0dp"
+                    android:minWidth="0dp" android:gravity="center" android:textSize="40dp"
+                    />
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="30" android:minHeight="0dp"
+                    android:minWidth="0dp">
+                <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/add_category_ur1" android:layout_weight="1" android:maxWidth="0dp"
+                        android:minHeight="0dp" android:minWidth="0dp"
+                        android:background="@drawable/zagolovok_buttons_rashod" android:textColor="@color/black"/>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" android:minHeight="0dp" android:minWidth="0dp"/>
+                <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/del_category_ur1" android:layout_weight="1" android:maxWidth="0dp"
+                        android:minHeight="0dp" android:minWidth="0dp"
+                        android:background="@drawable/zagolovok_buttons_rashod" android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="85">
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="90">
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="10">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="10"
+                            android:id="@+id/category_ur1_total">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="New Text"
+                                android:id="@+id/textView6" android:layout_weight="0" android:textColor="@color/black"
+                                android:gravity="center" android:textSize="20dp"/>
+                        <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="New Text"
+                                android:id="@+id/textView7" android:layout_weight="0" android:textColor="@color/black"
+                                android:gravity="center" android:textSize="20dp"/>
+                    </LinearLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Выберите категорию \n для удаления или ткните сюда для отмены"
+                            android:id="@+id/category_ur1_del_mes" android:visibility="gone"
+                            android:gravity="center" android:textColor="@color/black" android:textSize="25dp"/>
+                </FrameLayout>
+                <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/scrolCategories" android:layout_weight="85">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+                        <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    />
+                            <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="New Text"
+                                        android:id="@+id/textView8" android:layout_weight="0"
+                                        android:textColor="@color/black" android:gravity="center"
+                                        android:textSize="28dp"/>
+                                <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"/>
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="New Text"
+                                        android:id="@+id/textView9" android:layout_weight="0"
+                                        android:textColor="@color/black" android:gravity="center"
+                                        android:textSize="28dp"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </ScrollView>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:visibility="gone" android:id="@+id/Category_ur2">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" android:id="@+id/category_ur2_l1"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1">
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="80" android:background="@drawable/zagolovok_buttons_rashod"
+                    android:id="@+id/category_ur2_alert">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Новая категория"
+                            android:id="@+id/textView3" android:layout_weight="0" android:gravity="center"
+                            android:textColor="@color/black" android:textSize="24dp"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="97"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Введите название"
+                            android:id="@+id/textView4" android:layout_weight="0" android:gravity="center"
+                            android:textColor="@color/black" android:textIsSelectable="false" android:textSize="18dp"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="97"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"/>
+                    <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/category_ur2_edit" android:layout_weight="90" android:textSize="20dp"
+                            android:background="@drawable/pole_rashod" android:textColor="@color/black"
+                            android:textStyle="normal"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="0">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="80"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="ok"
+                            android:id="@+id/category_ur2_ok"
+                            android:background="@drawable/button_okno_rashod"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" android:id="@+id/category_ur2_l2"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:visibility="gone" android:id="@+id/Category_ur3">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" android:id="@+id/category_ur3_l1"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="2">
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="3" android:background="@drawable/zagolovok_buttons_rashod"
+                    android:id="@+id/category_ur3_alert">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Удалить?"
+                        android:id="@+id/textView5" android:layout_weight="1.5" android:gravity="center"
+                        android:textColor="@color/black" android:textSize="30dp"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="0.5">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Да"
+                            android:id="@+id/category_ur3_yes" android:layout_weight="2"
+                            android:background="@drawable/button_okno_rashod"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"/>
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Нет"
+                            android:id="@+id/category_ur3_no" android:layout_weight="2"
+                            android:background="@drawable/button_okno_rashod"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" android:id="@+id/category_ur3_l2"/>
+    </LinearLayout>
+</FrameLayout>

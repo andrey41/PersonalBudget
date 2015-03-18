@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PersonalBudget:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PersonalBudget_jar</output-path>
+    <root id="archive" name="PersonalBudget.jar">
+      <element id="module-output" name="PersonalBudget" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/junit-4.8.2.jar" path-in-jar="/" />
+      <element id="archive" name="Budget.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

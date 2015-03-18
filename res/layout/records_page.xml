@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="@color/white">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:visibility="visible" android:id="@+id/l">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="5" android:gravity="center"
+                android:background="@drawable/zagolovok_rashod" android:id="@+id/record_ur1_verh">
+            <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/record_back" android:background="@drawable/arrow_rashod"
+                    android:layout_weight="0.05"/>
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:gravity="center">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Еда"
+                            android:id="@+id/record_category_name" android:layout_weight="0" android:textSize="32dp"
+                            android:textColor="@color/white"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="3">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+                          android:layout_height="match_parent" android:layout_weight="3"
+                          android:id="@+id/records_ur1_panel">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="27dp" android:minHeight="0dp">
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="1"/>
+                    <Button style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:text="+" android:id="@+id/record_ur1_add"
+                            android:layout_weight="0" android:background="@drawable/zagolovok_buttons_rashod"
+                            android:textColor="@color/black"/>
+                    <Button style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:text="-" android:id="@+id/record_ur1_del"
+                            android:layout_weight="0" android:background="@drawable/zagolovok_buttons_rashod"
+                            android:textColor="@color/black"/>
+                    <Button style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:text=" " android:id="@+id/record_ur1_bol"
+                            android:layout_weight="0" android:background="@drawable/zagolovok_buttons_rashod"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Выберите запись для удаления или ткните сюда для отмены"
+                    android:id="@+id/record_ur1_del_mes" android:textColor="@color/black" android:gravity="center"
+                    android:textSize="20dp" android:visibility="gone"/>
+        </FrameLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="92">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="10">
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/line">
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="85">
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"/>
+                <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/scrollView2" android:layout_weight="97">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:id="@+id/records_ur1_scrollLayout">
+                        <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:background="@drawable/scrol_record_dohod">
+                            <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    />
+                            <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="New Text"
+                                        android:id="@+id/textView11" android:textSize="24dp"
+                                        android:textColor="@color/black" android:paddingTop="5dp"
+                                        android:paddingBottom="5dp" android:paddingLeft="8dp"
+                                        android:paddingRight="0dp"/>
+                                <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"/>
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="New Text"
+                                        android:id="@+id/textView12" android:textSize="24dp"
+                                        android:textColor="@color/black" android:paddingTop="5dp"
+                                        android:paddingBottom="5dp" android:paddingLeft="0dp"
+                                        android:paddingRight="8dp"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:visibility="gone" android:id="@+id/records_ur2">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2"
+               android:id="@+id/records_ur2_l1"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:layout_weight="1">
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="10"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content"
+                          android:layout_height="match_parent" android:layout_weight="80"
+                          android:background="@drawable/zagolovok_buttons_rashod" android:id="@+id/records_ur2_alert">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="3"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Новая запись" android:id="@+id/textView14" android:layout_weight="0"
+                              android:gravity="center" android:textColor="@color/black" android:textSize="24dp"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="97"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="wrap_content"
+                       android:layout_weight="1"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="3"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Введите сумму" android:id="@+id/textView15" android:layout_weight="0"
+                              android:gravity="center" android:textColor="@color/black" android:textSize="18dp"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="97"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="wrap_content"
+                       android:layout_weight="1"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="5"/>
+                    <EditText android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:id="@+id/records_ur2_pole" android:layout_weight="90" android:textSize="20dp"
+                              android:background="@drawable/pole_rashod" android:textColor="@color/black"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="5"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_weight="0">
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="80"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:text="ok"
+                            android:id="@+id/records_ur2_ok" android:background="@drawable/button_okno_rashod"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="5"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="wrap_content"
+                       android:layout_weight="1"/>
+            </LinearLayout>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="10"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="3"
+               android:id="@+id/records_ur2_l2"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:visibility="gone">
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="0">
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="0" android:background="@drawable/main_buttons">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView17" android:textColor="@color/red" android:layout_weight="6"
+                            android:text="Ошибка!\n Введённая сумма\nне может быть добавлена.\nПревышение располагаемых \nдоходов."
+                            android:textSize="20dp" android:gravity="center" android:textStyle="bold"
+                            android:paddingRight="10dp" android:paddingLeft="10dp"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_weight="0"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="ок"
+                            android:id="@+id/button18" android:background="@drawable/button_okno_rashod" android:textSize="18dp"/>
+                    <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_weight="0"/>
+            </LinearLayout>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+        </LinearLayout>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:visibility="gone" android:id="@+id/records_ur4">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="3"
+               android:id="@+id/records_ur4_l1"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:layout_weight="2">
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content"
+                          android:layout_height="match_parent" android:layout_weight="3"
+                          android:background="@drawable/zagolovok_buttons_rashod"
+                          android:id="@+id/records_ur4_alert" android:touchscreenBlocksFocus="false"
+                          android:visibility="visible">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Удалить?"
+                        android:id="@+id/textView16" android:layout_weight="1.5" android:gravity="center"
+                        android:textSize="24dp" android:textColor="@color/black"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_weight="0.5"
+                              >
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="1"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Да"
+                            android:id="@+id/records_ur4_yes" android:layout_weight="2"
+                            android:background="@drawable/button_okno_rashod"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="2"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Нет"
+                            android:id="@+id/records_ur4_no" android:layout_weight="2"
+                            android:background="@drawable/button_okno_rashod"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="match_parent"
+                           android:layout_weight="1"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="wrap_content"
+                       android:layout_weight="1"/>
+            </LinearLayout>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="3"
+               android:focusableInTouchMode="false" android:id="@+id/records_ur4_l2"/>
+    </LinearLayout>
+</FrameLayout>
